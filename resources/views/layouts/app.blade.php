@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('da modificare con i prossimi esercizi', 'da modificare con i prossimi esercizi')</title>
+    <title>@yield('title', 'My Movie App')</title>
     @vite('resources/js/app.js')
 </head>
-<body>
+<body class="d-flex flex-column">
+    <header>
+        @include('partials.header')
+    </header>
 
-    @include('partials.header')
-
-    <main>
+    <main class="flex-grow-1 overflow-auto py-2">
         @yield('content')
     </main>
 
-    @include('partials.footer')
+    <footer>
+        @include('partials.footer')
+    </footer>
 
 </body>
 </html>
