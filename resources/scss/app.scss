@@ -3,9 +3,38 @@
 
 body {
     height: 100vh;
+    background-color: #1a1a1a;
 }
 
 main {
     overflow-y: auto;
+    background-image: url('/public/img/bg.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+
+    .home-content {
+        margin-top: 80px;
+    }
+
+    .movie-content {
+        border: 1px solid #000;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.home-content h1,
+.movie-content h1 {
+    animation: fadeIn 2s ease-in-out;
+}
